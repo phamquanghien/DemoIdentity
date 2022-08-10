@@ -1,0 +1,39 @@
+@using DemoIdentity.ViewModel;
+@model EditRoleViewModel
+
+<h1>Delete Role</h1>
+<hr>
+@* <div class="row card form-center max-width-40">
+    <div class="col-md-12">
+        <form method="POST" asp-action="Delete" asp-controller="Role">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group mt-3">
+                <label asp-for="Id"></label>
+                <input asp-for="Id" disabled class="form-control mt-3">
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-3">
+                <label asp-for="RoleName"></label>
+                <input asp-for="RoleName" disabled class="form-control mt-3">
+                <span asp-validation-for="RoleName" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-3 mb-3">
+                <input type="submit" class="btn btn-success" value="Delete">
+                <a asp-action="Index" asp-controller="Role" class="btn btn-primary" >Cancel</a>
+            </div>
+        </form>
+    </div>
+</div> *@
+<div class="row card form-center max-width-40">
+    <div class="col-md-12">
+        <form method="POST" asp-action="Delete" asp-controller="Role">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input asp-for="Id" disabled hidden class="form-control mt-3">
+            <h2>Do you want to delete role: "@ViewBag.roleName"?</h2>
+            <div class="form-group mt-3 mb-3">
+                <input type="submit" class="btn btn-success" value="Delete">
+                <a asp-action="Index" asp-controller="Role" class="btn btn-primary" >Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
