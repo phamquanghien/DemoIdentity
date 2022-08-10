@@ -9,12 +9,11 @@ namespace DemoIdentity.Controllers
     public class RoleController : Controller{
         private readonly ApplicationDbContext _context;
         private readonly RoleManager<IdentityRole> _roleManager;
-        private readonly UserManager<IdentityUser> _userManager;
-        public RoleController (ApplicationDbContext context, RoleManager<IdentityRole> roleManager, UserManager<IdentityUser> userManager)
+        
+        public RoleController (ApplicationDbContext context, RoleManager<IdentityRole> roleManager)
         {
             _context = context;
             _roleManager = roleManager;
-            _userManager = userManager;
         }
         [HttpGet]
         public async Task<IActionResult> Index()
