@@ -1,0 +1,20 @@
+@using Microsoft.AspNetCore.Identity;
+@model IEnumerable<IdentityUserRole<string>>
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.UserId)</th>
+            <th>@Html.DisplayNameFor(m => m.RoleId)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>@Html.DisplayFor(m => item.UserId)</th>
+                <td>@Html.DisplayFor(m => item.RoleId)</td>
+            </tr>
+        }
+    </tbody>
+</table>

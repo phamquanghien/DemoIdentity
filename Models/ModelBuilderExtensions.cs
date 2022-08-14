@@ -16,15 +16,17 @@ namespace DemoIdentity.Models
             List<IdentityUser> users = new List<IdentityUser>() {
                 new IdentityUser {
                     UserName = "admin@gmail.com",
-                    NormalizedUserName = "ABC@GMAIL.COM",
+                    NormalizedUserName = "ADMIN@GMAIL.COM",
                     Email = "admin@gmail.com",
-                    NormalizedEmail = "ABC@GMAIL.COM"
+                    NormalizedEmail = "ADMIN@GMAIL.COM",
+                    EmailConfirmed = true
                 },
                 new IdentityUser {
                     UserName = "pqh.cntt@gmail.com",
                     NormalizedUserName = "PQH.CNTT@GMAIL.COM",
-                    Email = "admin@gmail.com",
-                    NormalizedEmail = "PQH.CNTT@GMAIL.COM"
+                    Email = "pqh.cntt@gmail.com",
+                    NormalizedEmail = "PQH.CNTT@GMAIL.COM",
+                    EmailConfirmed = true
                 },
             };
             modelBuilder.Entity<IdentityUser>().HasData(users);
