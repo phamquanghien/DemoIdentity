@@ -14,6 +14,14 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
+// builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+// .AddCookie(options =>
+// {
+//     options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+//     options.SlidingExpiration = true;
+//     options.AccessDeniedPath = "/Identity/Account/AccessDenied";
+// });
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
